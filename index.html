@@ -169,13 +169,10 @@ PHOTO;VALUE=URL:https://example.com/dp.jpg
 END:VCARD`;
 
     var dataUrl = "data:text/vcard;charset=utf-8," + encodeURIComponent(vCard);
-    var link = document.createElement("a");
-    link.href = dataUrl;
-    link.download = "contact.vcf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+
+    window.open(dataUrl);
   }
+
 </script>
 
 
